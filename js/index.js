@@ -43,6 +43,10 @@ console.log(letter);
  e.stopPropagation();
  });
 
+ document.addEventListener("dblclick", ()=>{
+  letter[6].transform = 'rotate(5';
+ })
+
 
 
 
