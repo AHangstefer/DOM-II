@@ -23,5 +23,26 @@ console.log(logo);
 document.addEventListener('keypress',(e)=> {
     // if (e.key==='f'){
      logo.style.color = 'gold';
+     e.stopPropagation();
     // }
 });
+
+
+
+
+const letter =document.querySelectorAll('p');
+console.log(letter);
+
+ document.addEventListener('scroll', (e)=>{
+ letter[0].style.color = 'hotpink';
+ letter[1].style.color= 'gold';
+ letter[2].style.color = 'gold';
+ letter[3].style.color = 'teal';
+ letter[4].style.color = 'teal';
+ letter[5].style.color = 'hotpink';
+ e.stopPropagation();
+ });
+
+
+
+
