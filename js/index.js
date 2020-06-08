@@ -76,8 +76,21 @@ button.forEach((b)=>{
 const topImg = document.querySelector('.intro img');
 console.log(topImg);
 
-window.addEventListener('focusin', (e)=>{
+window.addEventListener('resize', (e)=>{
     topImg.src = '../img/bus.jpg';
+    e.stopPropagation();
+});
+
+const middleImg = document.querySelectorAll('.img-content img');
+console.log(middleImg);
+
+document.addEventListener('click', (e)=>{
+    middleImg[0].src = '../img/Italy.jpg';
+    e.stopPropagation();
+});
+
+document.addEventListener('drag', (e)=>{
+    middleImg[1].src = '../img/Dubai.jpg';
 });
 
 //  window.addEventListener('focusin',(e)=>{
