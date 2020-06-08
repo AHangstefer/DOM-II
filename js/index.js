@@ -27,6 +27,11 @@ document.addEventListener('keypress',(e)=> {
     // }
 });
 
+document.addEventListener('keyup',(e)=>{
+    logo.style.color = 'initial';
+    e.stopPropagation();
+});
+
 
 
 
@@ -43,10 +48,43 @@ console.log(letter);
  e.stopPropagation();
  });
 
- document.addEventListener("dblclick", ()=>{
-  letter[6].transform = 'rotate(5';
- })
+ document.addEventListener("dblclick", (e)=>{
+  letter[7].style.transform = 'rotateY(30deg)';
+  letter[7].style.color = 'hotpink';
+ //letter[7].style.transform = 'preserve-3d';
+  e.stopPropagation();
+ });
 
+ 
+const button = document.querySelectorAll('.btn');
+console.log(button);
 
+button.forEach((b)=>{
+    b.addEventListener('mousemove',(e) => {
+        b.style.backgroundColor = 'gold';
+        e.stopPropagation();
+    });
+});
 
+button.forEach((b)=>{
+    b.addEventListener('mouseleave', (e)=>{
+        b.style.backgroundColor = "hotpink";
+        e.stopPropagation();
+    });
+});
 
+const topImg = document.querySelector('.intro img');
+console.log(topImg);
+
+window.addEventListener('focusin', (e)=>{
+    topImg.src = '../img/bus.jpg';
+});
+
+//  window.addEventListener('focusin',(e)=>{
+//     topImg.src = '../img/fun-bus.jpg';
+// });
+
+ 
+
+  
+ 
