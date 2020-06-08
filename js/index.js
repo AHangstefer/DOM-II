@@ -96,9 +96,12 @@ document.addEventListener('drag', (e)=>{
 let navi = document.querySelectorAll('.nav a');
 console.log(navi);
 
-// navi.forEach((a)=>{
-//     a.preventDefault();
-// });
+navi.forEach((a)=>{
+    document.addEventListener('click', (e) =>{
+        a.style.color = 'gold';
+        e.preventDefault();
+    });
+});
 
 
 
