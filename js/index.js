@@ -93,11 +93,14 @@ document.addEventListener('drag', (e)=>{
     middleImg[1].src = '../img/Dubai.jpg';
 });
 
-//  window.addEventListener('focusin',(e)=>{
-//     topImg.src = '../img/fun-bus.jpg';
+let navi = document.querySelectorAll('.nav a');
+console.log(navi);
+
+// navi.forEach((a)=>{
+//     a.preventDefault();
 // });
 
- 
+
 
   
  
